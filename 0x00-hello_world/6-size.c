@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * Print the size of various types 
  * Return 0 if executed properly
  */
