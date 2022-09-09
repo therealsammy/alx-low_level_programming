@@ -22,7 +22,6 @@ int main(void)
 		putchar((n % 10) + '0');
 
 		if (i == 9 && n == 9)
-		{
 			continue;
 
 			putchar(44);
