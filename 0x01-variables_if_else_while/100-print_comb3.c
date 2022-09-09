@@ -18,8 +18,8 @@ int main(void)
 		for (n = 0; n < 10; n++)
 		{
 
+		putchar((i % 10) + '0');
 		putchar((n % 10) + '0');
-		putchar((m % 10) + '0');
 
 		if (i == 9 && n == 9)
 		{
