@@ -20,14 +20,14 @@ int main(void)
 			for (m = n + 1; m < 10; m++)
 			{
 
-		putchar((i % 10) + '0');
-		putchar((n % 10) + '0');
-		putchar((m % 10) + '0');
+				putchar((i % 10) + '0');
+				putchar((n % 10) + '0');
+				putchar((m % 10) + '0');
 
-		if (i == 7 && n == 8 && m == 9)
-		{
-			continue;
-		}
+				if (i == 7 && n == 8 && m == 9)
+				{
+					continue;
+				}
 			putchar(44);
 			putchar(32);
 			}
