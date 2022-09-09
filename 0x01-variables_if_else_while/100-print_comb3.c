@@ -11,19 +11,20 @@
 
 int main(void)
 {
-	int i, n, m;
+	int i, n;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 10; i++)
 	{
-		n = i / 10;
-		m = i % 10;
-
-
-		putchar(n + '0');
-		putchar(m + '0');
-
-		if (i < 99)
+		for (n = 0; n < 10; n++)
 		{
+
+		putchar((n % 10) + '0');
+		putchar((m % 10) + '0');
+
+		if (i == 9 && n == 9)
+		{
+			continue;
+
 			putchar(44);
 			putchar(32);
 		}
