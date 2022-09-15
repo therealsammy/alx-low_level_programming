@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isdigit - check if letter is uppercase
+ * _isdigit - check if number is between 0 andd 9
  * @x: the number checked
  * Return: 1 if letter is uppercase and 0 if not
  */
