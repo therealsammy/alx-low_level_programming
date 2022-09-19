@@ -6,7 +6,7 @@
 
 void rev_string(char *s)
 {
-	char map;
+	/*char map;
 	int i, j, n;
 
 	for (j = 0; s[j] != '\0'; j++)
@@ -19,5 +19,19 @@ void rev_string(char *s)
 		map = s[i];
 		s[i] = s[n];
 		s[n--] = map;
+	}*/
+
+	int i, c, l;
+	char h;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
+
+	l = i;
+	for (i--, c = 0; c < l / 2; i--, c++)
+	{
+		h = s[c];
+		s[c] = s[i];
+		s[i] = h;
 	}
 }
