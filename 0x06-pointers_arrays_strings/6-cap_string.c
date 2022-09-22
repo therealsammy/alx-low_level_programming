@@ -9,16 +9,16 @@
 char *cap_string(char *str)
 {
 	int i, n, control;
-	char separator = ",;.!?(){}\n\t\" ";
+	char separator[] = ",;.!?(){}\n\t\" ";
 
 	for (i = 0, control = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] >= 'a' && str <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			control = 1;
 		}
 
-		for (n = 0; separator != '\0'; n++)
+		for (n = 0; separator[n] != '\0'; n++)
 		{
 			if (separator[n] == str[i])
 			{
