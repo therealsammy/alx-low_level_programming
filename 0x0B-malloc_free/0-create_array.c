@@ -7,38 +7,20 @@
  * @av: double pointer to array of strings passed to main
  * Return: Null if fail, else return pointer to new string
  */
-
-char *argstostr(int ac, char **av)
+char *create_array(unsigned int size, char c)
 {
-	char *a, *retp;
-	int i, j, total;
+	char *a;
+	unsigned int i;
 
-	if (ac == 0 || av == NULL)
+	if (size == 0)
 		return (NULL);
 
-	for (i = 0, total = 0; i < ac; i++)
-	{
-		for (j = 0; *(*(av + i) + j) != '\0'; j++, total++)
-			;
-		total++;
-	}
-	total++;
-
-	a = malloc(total * sizeof(char));
+	a = malloc(size * sizeof(*a));
 	if (a == NULL)
 		return (NULL);
 
-	retp = a;
-	for (i = 0; i < ac; i++)
-	{
-		for (j = 0; av[i][j] != '\0'; j++)
-		{
-			*a = av[i][j];
-			a++;
-		}
-		*a = '\n';
-		a++;
-	}
+	for (i = 0; i < size; i++)
+		a[i] = c;
 
-	return (retp);
+	return (a);
 }
